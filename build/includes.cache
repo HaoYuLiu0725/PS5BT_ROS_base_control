@@ -1,0 +1,232 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\lhjh0\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\lhjh0\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\variants\\mega"
+  },
+  {
+    "Sourcefile": "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\build\\sketch\\PS5BT_ROS_base_control.ino.cpp",
+    "Include": "PS5BT.h",
+    "Includepath": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0"
+  },
+  {
+    "Sourcefile": "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\build\\sketch\\PS5BT_ROS_base_control.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\lhjh0\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\build\\sketch\\PS5BT_ROS_base_control.ino.cpp",
+    "Include": "ros.h",
+    "Includepath": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\Rosserial_Arduino_Library\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\build\\sketch\\PS5BT_ROS_base_control.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\AMBX.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\BTD.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\BTHID.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\MiniDSP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PS3BT.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PS3USB.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PS4Parser.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PS5Parser.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PS5Trigger.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\PSBuzz.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\SPP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\SwitchProParser.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\UHS2_gpio.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\Usb.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\Wii.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\XBOXOLD.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\XBOXONE.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\XBOXONESParser.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\XBOXRECV.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\XBOXUSB.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\adk.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\cdc_XR21B1411.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\cdcacm.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\cdcftdi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\cdcprolific.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\hidboot.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\hidcomposite.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\hidescriptorparser.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\hiduniversal.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\hidusagetitlearrays.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\masstorage.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\max_LCD.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\message.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\parsetools.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\usbh_midi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\usbhid.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\USB_Host_Shield_Library_2.0\\usbhub.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.5\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\Rosserial_Arduino_Library\\src\\duration.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\lhjh0\\OneDrive\\文件\\libraries\\Rosserial_Arduino_Library\\src\\time.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

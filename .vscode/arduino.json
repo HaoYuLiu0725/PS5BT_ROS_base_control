@@ -1,0 +1,7 @@
+{
+    "sketch": "PS5BT_ROS_base_control.ino",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "output": "c:/Users/lhjh0/OneDrive/桌面/PS5BT_ROS_base_control/build",
+    "programmer": "arduino:avrispmkii"
+}
