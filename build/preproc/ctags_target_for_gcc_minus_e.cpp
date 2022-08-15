@@ -35,7 +35,12 @@ float angular_speed_threshold = 0.8 /* rad/s*/ * 10 / 127.5;
 /*-----ROS & rosserial-----------------------------------------------------------------------------*/
 # 29 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 2
 # 30 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 2
-ros::NodeHandle nh;
+class NewHardware : public ArduinoHardware
+{
+  public:
+  NewHardware():ArduinoHardware(&Serial, 500000){};
+};
+ros::NodeHandle_<NewHardware> nh;
 geometry_msgs::Twist base_speed;
 ros::Publisher PS5_controller("/cmd_vel", &base_speed);
 /*-----arduino function----------------------------------------------------------------------------*/
@@ -50,103 +55,103 @@ float zero_speed_threshold(float x, float threshold){
 }
 
 void print_Hat(){
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 45 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 45 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\r\nLeftHatX: "
-# 45 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 45 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));
-  Serial.print(PS5.getAnalogHat(LeftHatX));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 47 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 47 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tLeftHatY: "
-# 47 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 47 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));
-  Serial.print(PS5.getAnalogHat(LeftHatY));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 49 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 49 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tRightHatX: "
-# 49 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 49 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));
-  Serial.print(PS5.getAnalogHat(RightHatX));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 51 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 51 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tRightHatY: "
-# 51 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 51 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));
-  Serial.print(PS5.getAnalogHat(RightHatY));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 50 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 50 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\r\nLeftHatX: "
+# 50 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 50 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));
+  Serial1.print(PS5.getAnalogHat(LeftHatX));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 52 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 52 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tLeftHatY: "
+# 52 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 52 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));
+  Serial1.print(PS5.getAnalogHat(LeftHatY));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 54 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 54 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tRightHatX: "
+# 54 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 54 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));
+  Serial1.print(PS5.getAnalogHat(RightHatX));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tRightHatY: "
+# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));
+  Serial1.print(PS5.getAnalogHat(RightHatY));
 }
 
 void print_Hat_and_speed(){
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\r\nLeftHatY: "
-# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 56 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));Serial.print(PS5.getAnalogHat(LeftHatY));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 57 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 57 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tVx: "
-# 57 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 57 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));Serial.print(Vx, 4);
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 58 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 58 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tLeftHatX: "
-# 58 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 58 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              ))); Serial.print(PS5.getAnalogHat(LeftHatX));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 59 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 59 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tVy: "
-# 59 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 59 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));Serial.print(Vy, 4);
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 60 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 60 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tRightHatX: "
-# 60 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 60 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              ))); Serial.print(PS5.getAnalogHat(RightHatX));
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
 # 61 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
 # 61 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\tW: "
+               "\r\nLeftHatY: "
 # 61 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
+               ); &__c[0];}))
 # 61 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              ))); Serial.print(W, 4);
+               )));Serial1.print(PS5.getAnalogHat(LeftHatY));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 62 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 62 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tVx: "
+# 62 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 62 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));Serial1.print(Vx, 4);
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 63 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 63 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tLeftHatX: "
+# 63 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 63 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               ))); Serial1.print(PS5.getAnalogHat(LeftHatX));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 64 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 64 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tVy: "
+# 64 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 64 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));Serial1.print(Vy, 4);
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 65 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 65 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tRightHatX: "
+# 65 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 65 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               ))); Serial1.print(PS5.getAnalogHat(RightHatX));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 66 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 66 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\tW: "
+# 66 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 66 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               ))); Serial1.print(W, 4);
 }
 
 void PS_button_disconnect(){
@@ -161,40 +166,40 @@ void PS_button_disconnect(){
     ps_timer = millis();
 
   if (PS5.getButtonClick(PS))
-    Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 76 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-                (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 76 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-                "\r\nPS"
-# 76 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-                ); &__c[0];}))
-# 76 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-                )));
+    Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 81 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+                 (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 81 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+                 "\r\nPS"
+# 81 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+                 ); &__c[0];}))
+# 81 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+                 )));
 }
 /*----------------------------------------------------------------------------------------*/
 void setup() {
-  Serial.begin(115200);
+  Serial1.begin(115200);
   if (Usb.Init() == -1) {
-    Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 82 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-                (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 82 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-                "\r\nOSC did not start"
-# 82 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-                ); &__c[0];}))
-# 82 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-                )));
+    Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 87 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+                 (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 87 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+                 "\r\nOSC did not start"
+# 87 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+                 ); &__c[0];}))
+# 87 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+                 )));
     while (1); // Halt
   }
-  Serial.print((reinterpret_cast<const __FlashStringHelper *>(
-# 85 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              (__extension__({static const char __c[] __attribute__((__progmem__)) = (
-# 85 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              "\r\nPS5 Bluetooth Library Started"
-# 85 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
-              ); &__c[0];}))
-# 85 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
-              )));
+  Serial1.print((reinterpret_cast<const __FlashStringHelper *>(
+# 90 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               (__extension__({static const char __c[] __attribute__((__progmem__)) = (
+# 90 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               "\r\nPS5 Bluetooth Library Started"
+# 90 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino" 3
+               ); &__c[0];}))
+# 90 "c:\\Users\\lhjh0\\OneDrive\\桌面\\PS5BT_ROS_base_control\\PS5BT_ROS_base_control.ino"
+               )));
   /*-----ROS & rosserial-----*/
   nh.initNode();
   nh.advertise(PS5_controller);
@@ -215,6 +220,10 @@ void loop() {
     print_Hat_and_speed();
   }
   /*-----ROS & rosserial-----*/
+  base_speed.linear.x = Vx;
+  base_speed.linear.y = Vy;
+  base_speed.angular.z = W;
   PS5_controller.publish( &base_speed );
   nh.spinOnce();
+  delay(10);
 }

@@ -30,7 +30,7 @@ float angular_speed_threshold = max_angular_speed * 10 / 127.5;
 class NewHardware : public ArduinoHardware
 {
   public:
-  NewHardware():ArduinoHardware(&Serial1, 500000){};
+  NewHardware():ArduinoHardware(&Serial, 500000){};
 };
 ros::NodeHandle_<NewHardware>  nh;
 geometry_msgs::Twist base_speed;
@@ -47,23 +47,23 @@ float zero_speed_threshold(float x, float threshold){
 }
 
 void print_Hat(){
-  Serial.print(F("\r\nLeftHatX: "));
-  Serial.print(PS5.getAnalogHat(LeftHatX));
-  Serial.print(F("\tLeftHatY: "));
-  Serial.print(PS5.getAnalogHat(LeftHatY));
-  Serial.print(F("\tRightHatX: "));
-  Serial.print(PS5.getAnalogHat(RightHatX));
-  Serial.print(F("\tRightHatY: "));
-  Serial.print(PS5.getAnalogHat(RightHatY));
+  Serial1.print(F("\r\nLeftHatX: "));
+  Serial1.print(PS5.getAnalogHat(LeftHatX));
+  Serial1.print(F("\tLeftHatY: "));
+  Serial1.print(PS5.getAnalogHat(LeftHatY));
+  Serial1.print(F("\tRightHatX: "));
+  Serial1.print(PS5.getAnalogHat(RightHatX));
+  Serial1.print(F("\tRightHatY: "));
+  Serial1.print(PS5.getAnalogHat(RightHatY));
 }
 
 void print_Hat_and_speed(){
-  Serial.print(F("\r\nLeftHatY: "));Serial.print(PS5.getAnalogHat(LeftHatY));
-  Serial.print(F("\tVx: "));Serial.print(Vx, 4);
-  Serial.print(F("\tLeftHatX: "));  Serial.print(PS5.getAnalogHat(LeftHatX));
-  Serial.print(F("\tVy: "));Serial.print(Vy, 4);
-  Serial.print(F("\tRightHatX: ")); Serial.print(PS5.getAnalogHat(RightHatX));
-  Serial.print(F("\tW: ")); Serial.print(W, 4);
+  Serial1.print(F("\r\nLeftHatY: "));Serial1.print(PS5.getAnalogHat(LeftHatY));
+  Serial1.print(F("\tVx: "));Serial1.print(Vx, 4);
+  Serial1.print(F("\tLeftHatX: "));  Serial1.print(PS5.getAnalogHat(LeftHatX));
+  Serial1.print(F("\tVy: "));Serial1.print(Vy, 4);
+  Serial1.print(F("\tRightHatX: ")); Serial1.print(PS5.getAnalogHat(RightHatX));
+  Serial1.print(F("\tW: ")); Serial1.print(W, 4);
 }
 
 void PS_button_disconnect(){
@@ -78,16 +78,16 @@ void PS_button_disconnect(){
     ps_timer = millis();
 
   if (PS5.getButtonClick(PS))
-    Serial.print(F("\r\nPS"));
+    Serial1.print(F("\r\nPS"));
 }
 /*----------------------------------------------------------------------------------------*/
 void setup() {
-  Serial.begin(115200);
+  Serial1.begin(115200);
   if (Usb.Init() == -1) {
-    Serial.print(F("\r\nOSC did not start"));
+    Serial1.print(F("\r\nOSC did not start"));
     while (1); // Halt
   }
-  Serial.print(F("\r\nPS5 Bluetooth Library Started"));
+  Serial1.print(F("\r\nPS5 Bluetooth Library Started"));
   /*-----ROS & rosserial-----*/
   nh.initNode();
   nh.advertise(PS5_controller);
